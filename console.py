@@ -3,6 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
 
 # declaring class definition
 class HBNBCommand(cmd.Cmd):
@@ -97,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             obj_class = args[0]
             obj_id = args[1]
-            obj_key = obj_class + "." + obj_class
+            obj_key = obj_class + "." + obj_id
             obj = storage.all()[obj_key]
             attr_name = args[2]
             attr_value = args[3]
