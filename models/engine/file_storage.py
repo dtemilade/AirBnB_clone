@@ -7,7 +7,9 @@ from models.place import Place
 from models.review import Review
 from models.amenity import Amenity
 from models.base_model import BaseModel
+
 from models.user import User
+
 
 class FileStorage():
     # Declare Private class attributes
@@ -26,7 +28,7 @@ class FileStorage():
     def save(self):
         # open file to write and serialize
         with open(self.__file_path, "w", encoding="utf-8") as f:
-            dict_s = {k : v.to_dict() for k, v in self.__objects.items()}
+            dict_s = {k: v.to_dict() for k, v in self.__objects.items()}
             json.dump(dict_s, f)
 
     def reload(self):
