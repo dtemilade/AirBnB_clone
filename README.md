@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0x00. AirBnB clone - The console
 0x00.Table of contents
 0x01 Introduction
@@ -155,3 +156,14 @@ e952b772-80a5-41e9-b728-6bc4dc5c21b4
 (hbnb)
 update
 Updates an instance based on the class name, id, and kwargs passed. Update the file.json
+=======
+0x00.AirBnB Clone - The Console
+Functionalities of this command interpreter:
+Create a new object (ex: a new User or a new Place)
+Retrieve an object from a file, a database etc...
+Do operations on objects (count, compute stats, etc...)
+Update attributes of an object
+Destroy an object
+Environment
+This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+>>>>>>> fb164d1c13eea6ccdaaea0dd88a03a5099332603
