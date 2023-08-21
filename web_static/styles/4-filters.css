@@ -1,0 +1,25 @@
+.filters {
+    background-color: #ffffff;
+    height: 70px;
+    width: 100%;
+    border: 1px #DDDDDD solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    font-size: 18px;
+    background-color: #ff5a5f;
+    color: #fff;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    transform: translateY(25%) translateX(-5%);
+    
+}
+
+button:hover {
+    opacity: 0.9;
+}
