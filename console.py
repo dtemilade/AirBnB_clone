@@ -10,11 +10,12 @@ from models.base_model import BaseModel
 from models import storage
 from models.user import User
 
+
 # declaring class definition
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
     __classes = ["BaseModel", "User", "State", "City", "Place", "Review",
-            "Amenity"]
+                 "Amenity"]
 
     def do_EOF(self, line):
         """for EOF function\n"""
@@ -85,7 +86,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             print([str(v) for k, v in storage.all().items() if
-                k.startswith(args[0])])
+                   k.startswith(args[0])])
 
     def do_update(self, arg):
         args = arg.split()
@@ -132,13 +133,13 @@ class HBNBCommand(cmd.Cmd):
             # for retrieve the number of instances of a class
             elif args[1] == "count()":
                 val_count = [v for k, v in storage.all().items() if
-                        k.startswith(args[0])]
+                             k.startswith(args[0])]
                 print(len(val_count))
             # retrieve an instance based on its ID:
             elif args[1].startswith("show"):
                 val_id = args[1].split('"')[1]
                 self.do_show(f"{args[0]} {val_id}")
-            # to destroy an instance based on his ID: 
+            # to destroy an instance based on his ID
             elif args[1].startswith("destroy"):
                 val_id = args[1].split('"')[1]
                 self.do_destroy(f"{args[0]} {val_id}")
@@ -151,6 +152,7 @@ class HBNBCommand(cmd.Cmd):
                 attr_name = split_case[1].strip('"')
                 attr_value = split_case[2].strip('"')
                 self.do_update(f"{args[0]} {val_id} {attr_name} {attr_value}")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
